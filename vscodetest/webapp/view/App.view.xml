@@ -1,0 +1,21 @@
+<mvc:View controllerName="ronen.test.controller.App" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m" displayBlock="true">
+	<App>
+		<pages>
+			<Page title="{i18n>Title1}">
+				<Button class="button" text="HELLO" press=".onShowHello" />
+				<Button text="hellp dialog" press=".onShowDialog" />
+				<Input value="name" description="Hello " valueLiveUpdate="true" width="60%" />
+
+				<List id="kkk" width="auto" items="{PO>/purorder}">
+					<items>
+						<ObjectListItem title="{PO>Eblen} - {PO>matnr}" number="{PO>NETPR}"></ObjectListItem>
+					</items>
+				</List>
+				<MultiComboBox id="mcb" items="{PO>/purorder}">
+					<core:Item key="{PO>Eblen}" text="{PO>matnr}" />
+				</MultiComboBox>
+				<mvc:XMLView viewName="ronen.test.view.Test"></mvc:XMLView>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
